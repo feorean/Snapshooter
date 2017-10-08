@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="Screens" syncable="YES">
+        <attribute name="defaultflag" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="screenname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Settings" syncable="YES">
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Snapshots" syncable="YES">
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="downloadseq" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="eventtype" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="filename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filenamexs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filesize" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="filesizexs" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="screenname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <fetchRequest name="local_snaps" entity="Snapshots" predicateString="status CONTAINS &quot;local&quot;"/>
+    <fetchRequest name="range_snaps" entity="Snapshots" predicateString="create_date &lt;= CAST(428010257.495731, &quot;NSDate&quot;)"/>
+    <elements>
+        <element name="Screens" positionX="-63" positionY="9" width="128" height="75"/>
+        <element name="Settings" positionX="-63" positionY="9" width="128" height="75"/>
+        <element name="Snapshots" positionX="-63" positionY="-18" width="128" height="210"/>
+    </elements>
+</model>
